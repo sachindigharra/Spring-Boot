@@ -1,0 +1,31 @@
+/*
+ # Spring Boot
+        Auto Configurations
+      --->  It is the Combination of Spring Framework and the boot ->(Auto Configurations)
+        No need of Configurations Manualy like Tomcat server Configurations etc
+      --->
+       Dependency Injection
+           * it take care About the Object Management
+           * Store in Context Container  which is place in JVM
+           * couple between to Classes according to Requirement
+
+           DI Annotations
+            @ Component
+                this Annotations is Indicate that object of that is managed by Spring
+            @Autowired
+             # Setup the  loose Coupling  between two Classes
+              #over came chance  of hard Coupling Error
+            @ primary
+                Priorities the Class perference
+                # i.e if more than 1 classes couple with interface then which class object is take for use
+                # it use before the class_name to increase its priorities
+            @Qualifier(class_name)
+             above case occur to prevent from this Situation  we pass the name of class in Qualifier
+
+
+
+      REST API Annotations and how it works
+
+
+
+*/
