@@ -3,8 +3,7 @@ package com.example.eComApp.service;
 import com.example.eComApp.model.Product;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 
 import java.util.ArrayList;
@@ -33,5 +32,26 @@ public class ProductService {
     public Product addProduct( Product prod){
         products.add(prod);
         return prod;
+    }
+
+    public List<Product>  updateProduct(Product prod) {
+       for(int i=0;i<products.size();i++){
+           if(products.get(i).getProdId()==prod.getProdId()){
+               products.set(i,prod);
+               return products;
+           }
+
+       }
+        products.add(prod);
+        return  products;
+    }
+
+    public Product deleteProductById(long proId) {
+        for(int i=0;i<products.size();i++){
+            if(products.get(i).getProdId()==proId){
+                return products.remove(i);
+            }
+        }
+        return new Product();
     }
 }
